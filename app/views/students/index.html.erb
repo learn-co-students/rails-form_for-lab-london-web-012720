@@ -1,0 +1,8 @@
+<% @students.map do |st|%>
+<%= link_to st.first_name, student_path(st)%> | <%= link_to "edit", edit_student_path(st)%> |  
+<%= link_to 'Delete', st, method: :delete, data: {confirm: "are you sure man??"}%><br>
+<br>
+<%end%>
+<br>
+
+<%= link_to "new student", new_student_path%>
