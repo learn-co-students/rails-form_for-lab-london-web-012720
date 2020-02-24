@@ -1,0 +1,9 @@
+<%@schoolclasses.each do |sc|%>
+
+<%= link_to sc.title, school_class_path(sc)%><br> | <%= link_to 'Delete', sc, method: :delete %><br> | 
+<%=link_to "update", edit_school_class_path(sc) %>
+<%=sc.room_number%>
+<br>
+<%end%>
+
+<%=link_to "new class", new_school_class_path%>
