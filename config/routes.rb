@@ -4,3 +4,8 @@ Rails.application.routes.draw do
   resources :students
   resources :school_classes
 end
+
+
+class Species < ApplicationRecord
+  has_many :pets, dependent: :destroy
+end
